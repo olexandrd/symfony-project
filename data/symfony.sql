@@ -94,15 +94,6 @@ CREATE TABLE public.symfony_demo_user (
 
 
 --
--- Data for Name: doctrine_migration_versions; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.doctrine_migration_versions (version, executed_at, execution_time) FROM stdin;
-DoctrineMigrations\\Version20210405132033	2020-09-29 09:16:22	99
-\.
-
-
---
 -- Data for Name: symfony_demo_comment; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -565,6 +556,12 @@ ALTER TABLE ONLY public.symfony_demo_post_tag
 ALTER TABLE ONLY public.symfony_demo_post_tag
     ADD CONSTRAINT symfony_demo_post_tag_tag_id_fkey FOREIGN KEY (tag_id) REFERENCES public.symfony_demo_tag(id) ON DELETE CASCADE;
 
+--
+-- Name: symfony_demo_post RENAME
+--
+
+ALTER TABLE public.symfony_demo_post
+    RENAME TO symfony_demo_posts;
 
 --
 -- PostgreSQL database dump complete

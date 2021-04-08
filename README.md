@@ -15,8 +15,8 @@ Installation
 ------------
   * initial database dump is [placed here][3];
   * vendors must be installed by composer;
-  * database migration command is necessary;  
-  * static files installed and build by yarn.
+  * database migration is necessary;  
+  * static files installed by yarn (`yarn install && yarn build`).
 
 
 [1]: https://symfony.com/doc/current/best_practices.html
